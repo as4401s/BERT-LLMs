@@ -60,6 +60,46 @@ This image compares the architecture of BERT Base and BERT Large:
 
 ---
 
+## Masked Language Modeling (MLM)
+
+Masked Language Modeling (MLM) is a key pretraining objective used in models like BERT. It helps the model learn contextual representations of words by predicting masked tokens in a sentence. Here's how MLM works:
+
+#### Explanation
+
+#### Input Masking:
+- A portion of the tokens in the input sequence is randomly masked. For example, in the sentence "I love [MASK] animals," the word "cute" might be masked.
+- Typically, 15% of the tokens are masked:
+  - 80% are replaced with the `[MASK]` token.
+  - 10% are replaced with a random token.
+  - 10% remain unchanged.
+
+#### Objective:
+- The model predicts the original tokens at the masked positions based on the context provided by the surrounding words.
+
+#### Benefits:
+- This forces the model to learn bidirectional context, capturing both left-to-right and right-to-left dependencies.
+- MLM helps the model generalize well for downstream NLP tasks like question answering, sentiment analysis, and text classification.
+
+The image below illustrates how MLM works in practice:
+
+![Masked Language Modeling](https://github.com/as4401s/BERT-LLMs/blob/main/images/4.png)
+
+1. **Input Sequence:** The sentence is tokenized, and one or more tokens are masked (e.g., `[N-MASK]` in the example).
+2. **Embeddings:**
+   - **Token Embeddings:** Represent the tokens in the input.
+   - **Positional Embeddings:** Encode the position of each token in the sequence.
+3. **Transformer Encoder:** Processes the input and predicts the masked token based on contextual information.
+4. **Output:** The model predicts the masked word (e.g., "boring" in this example) using the surrounding tokens for context.
+
+---
+
+#### How MLM Improves Model Performance
+
+- **Bidirectional Context:** Unlike unidirectional models, BERT can look both before and after a word to make predictions, making it highly effective at understanding context.
+- **Generalization:** By pretraining on MLM, the model learns universal language representations that can be fine-tuned for specific NLP tasks.
+
+---
+
 ### Features
 Interactive Visualizations: Gain insights into BERT's inner workings, including attention heads and embeddings.
 Transfer Learning Tutorials: Learn to adapt BERT for your own datasets and tasks.
