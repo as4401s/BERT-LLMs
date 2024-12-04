@@ -18,12 +18,7 @@ BERT Transfer Learning: Leveraging pre-trained BERT for custom tasks.
 Sequence Classification with BERT: Using BERT for tasks like sentiment analysis.
 Question Answering with BERT: Building QA models with BERT.
 
-# BERT and Transformers Visualizations
-
-This repository contains visualizations and explanations of BERT architecture and embeddings.
-
-
-
+# BERT 
 ---
 
 ## BERT Architecture
