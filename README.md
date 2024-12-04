@@ -27,8 +27,13 @@ The architecture of BERT includes multiple transformer encoder layers. The diagr
 
 ![BERT Architecture](https://github.com/as4401s/BERT-LLMs/blob/main/images/0.png)
 
-- Input: Tokenized sequence such as `[CLS] I love llamas`.
-- Layers: 12 or 24 Transformer encoder layers process the sequence to produce contextualized word embeddings.
+- **BERT Base:** 
+  - 12 Transformer layers
+  - 110M parameters
+- **BERT Large:** 
+  - 24 Transformer layers
+  - 340M parameters
+- Both models use multi-head attention and feed-forward networks.
 
 ---
 
@@ -50,13 +55,8 @@ This image compares the architecture of BERT Base and BERT Large:
 
 ![BERT Model Comparison](https://github.com/as4401s/BERT-LLMs/blob/main/images/2.png)
 
-- **BERT Base:** 
-  - 12 Transformer layers
-  - 110M parameters
-- **BERT Large:** 
-  - 24 Transformer layers
-  - 340M parameters
-- Both models use multi-head attention and feed-forward networks.
+- Input: Tokenized sequence such as `[CLS] I love llamas`.
+- Layers: 12 or 24 Transformer encoder layers process the sequence to produce contextualized word embeddings.
 
 ---
 
