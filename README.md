@@ -100,6 +100,52 @@ The image below illustrates how MLM works in practice:
 
 ---
 
+# Next Sentence Prediction (NSP)
+
+Next Sentence Prediction (NSP) is a key pretraining objective in BERT that helps the model understand relationships between sentences, which is vital for tasks like question answering, natural language inference, and dialog generation.
+
+---
+
+## Explanation
+
+### How NSP Works:
+1. **Input Pairs:**
+   - The model takes two input sentences (Sentence A and Sentence B).
+   - 50% of the time, Sentence B logically follows Sentence A (**"IsNext"**).
+   - 50% of the time, Sentence B is a random sentence from the corpus (**"NotNext"**).
+
+2. **Objective:**
+   - The task is to predict whether Sentence B follows Sentence A.
+
+3. **Input Representation:**
+   - Sentences are tokenized and separated by a `[SEP]` token.
+   - The `[CLS]` token is added at the start of the sequence.
+   - Segment embeddings (A for Sentence A and B for Sentence B) differentiate the two inputs.
+
+4. **Output:**
+   - The model outputs a binary classification: **"IsNext"** or **"NotNext"**.
+
+---
+
+## Visual Example of NSP
+
+While this repository doesn't currently include a visual for NSP, the process is as follows:
+
+1. Input: `[CLS] Sentence A [SEP] Sentence B [SEP]`
+2. Segment Embeddings:
+   - Tokens from Sentence A: Segment A embeddings.
+   - Tokens from Sentence B: Segment B embeddings.
+3. Output: Binary classification to determine whether Sentence B follows Sentence A.
+
+---
+
+## Benefits of NSP
+
+- **Sentence Understanding:** Helps the model capture sentence relationships and context.
+- **Versatility:** NSP improves performance on NLP tasks such as question answering, summarization, and dialog systems.
+
+---
+
 ### Features
 Interactive Visualizations: Gain insights into BERT's inner workings, including attention heads and embeddings.
 Transfer Learning Tutorials: Learn to adapt BERT for your own datasets and tasks.
