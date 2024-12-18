@@ -44,9 +44,7 @@ The diagram below illustrates how input embeddings are constructed in a Transfor
 
 ---
 
-## BERT Base vs Large Model
-
-This image compares the architecture of BERT Base and BERT Large:
+## BERT Base
 
 ![BERT Model Comparison](https://github.com/as4401s/BERT-LLMs/blob/main/images/2.png)
 
