@@ -2,11 +2,6 @@
 
 Welcome to the BERT Exploration Repository! This repository is dedicated to exploring various aspects of BERT (Bidirectional Encoder Representations from Transformers) with a focus on visualization, transfer learning, sequence classification, and question answering tasks.
 
-### Table of Contents
-
-Overview
-Features
-
 ### Overview
 
 BERT, developed by Google, is a transformer-based model that has revolutionized natural language processing (NLP). It is pre-trained on a large corpus of text and can be fine-tuned for a variety of downstream tasks.
