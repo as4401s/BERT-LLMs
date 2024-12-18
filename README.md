@@ -146,6 +146,62 @@ While this repository doesn't currently include a visual for NSP, the process is
 
 ---
 
+# Differences Between BERT, DistilBERT, and RoBERTa
+
+BERT (Bidirectional Encoder Representations from Transformers) has inspired several variants, each enhancing specific aspects of the original model. Here's a brief overview of **BERT**, **DistilBERT**, and **RoBERTa**:
+
+---
+
+### BERT
+- **Description**: BERT is a transformer-based model developed by Google that captures bidirectional context in language understanding.
+- **Pretraining Data**: 16GB of text data, including:
+  - BooksCorpus
+  - English Wikipedia
+- **Tasks**:
+  - Masked Language Modeling (MLM)
+  - Next Sentence Prediction (NSP)
+- **Architecture**:
+  - 12 encoder layers
+  - 768 hidden units
+  - 110 million parameters (Base version)
+
+---
+
+### DistilBERT
+- **Description**: DistilBERT is a compressed version of BERT, designed to be smaller, faster, and more efficient while retaining a significant portion of BERT's performance.
+- **Parameters**: 66 million parameters (40% fewer than BERT)
+- **Performance**: Achieves ~97% of BERT's performance.
+- **Advantages**:
+  - Faster training
+  - Easier deployment, especially in resource-constrained environments.
+
+---
+
+### RoBERTa
+- **Description**: RoBERTa (Robustly Optimized BERT Approach) is an optimized version of BERT, trained with improved strategies and on a larger dataset.
+- **Pretraining Data**: 160GB of text data, including:
+  - BooksCorpus and English Wikipedia (BERT data)
+  - CommonCrawl News dataset
+  - WebText
+  - Stories from Common Crawl
+- **Key Modifications**:
+  - Removed the NSP task.
+  - Used **dynamic masking** (changing masked tokens during training).
+  - Trained with larger batch sizes and higher learning rates.
+- **Performance**: Enhanced performance over BERT on various NLP tasks.
+
+---
+
+### Summary
+| **Model**       | **Parameters** | **Key Features**                                                                       |
+|-----------------|---------------|----------------------------------------------------------------------------------------|
+| **BERT**       | 110M          | Original model capturing bidirectional context.                                        |
+| **DistilBERT** | 66M           | Smaller, faster version achieving ~97% of BERT's performance.                          |
+| **RoBERTa**    | 125M+         | Optimized version trained on more data with dynamic masking and improved strategies.   |
+
+---
+
+
 ### Features
 Interactive Visualizations: Gain insights into BERT's inner workings, including attention heads and embeddings.
 Transfer Learning Tutorials: Learn to adapt BERT for your own datasets and tasks.
